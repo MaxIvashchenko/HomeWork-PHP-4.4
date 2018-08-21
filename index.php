@@ -1,7 +1,11 @@
 <?php
-session_start();
 require_once 'config.php';
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +45,7 @@ if (isset($_POST['create'])) {
         )";
         $sth = $connect->prepare($createTable);
         $sth->execute();
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);    
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);     
     }
 }
 
