@@ -41,8 +41,7 @@ if (isset($_POST['create'])) {
         )";
         $sth = $connect->prepare($createTable);
         $sth->execute();
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-        return $result;        
+        $result = $sth->fetchAll(PDO::FETCH_ASSOC);    
     }
 }
 
