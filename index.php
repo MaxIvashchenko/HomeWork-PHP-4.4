@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -44,8 +45,6 @@ if (isset($_POST['create'])) {
         return $result;        
     }
 }
-
-require "config.php";
 
 $sql = "SHOW TABLES";
 $statement = $connect->prepare($sql);
